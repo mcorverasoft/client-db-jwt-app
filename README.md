@@ -2,9 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
 
+## Configure yor backend url
+
+Edit the `config.json`,  the value default are:
+```bash
+{
+"backendUrl" : "http://localhost:8081",
+"backendUrlLogin": "http://localhost:8081/app/login",
+"backendUrlSignup": "http://localhost:8081/app/signup",
+"textfile" : "assets/textfile.txt"
+}
+```
+Before this, [download or clone], configure and run this proyect 'https://github.com/mcorverasoft/spring-security-db-jwt-app.git' (Your backend)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 ## Code scaffolding
 

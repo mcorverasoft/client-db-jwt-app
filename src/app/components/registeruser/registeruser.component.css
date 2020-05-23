@@ -1,0 +1,42 @@
+
+/*---------------------------------------
+    Register section
+-----------------------------------------*/
+
+#register {
+  background: #535bd4 url('../../../assets/images/home-bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -webkit-flex;
+   display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+   align-items: center;
+  height: 95vh;
+  position: relative;
+}
+
+#register .overlay {
+background: #4776E6; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #4776E6 , #8E54E9); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #4776E6 , #8E54E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+opacity: 0.9;
+position: absolute;
+width: 100%;
+height: 95vh;
+top: 0;
+left: 0;
+right: 0;
+}
+
+#register img {
+width: 50%;
+height: auto;
+padding-top: 45px;
+}
+
+

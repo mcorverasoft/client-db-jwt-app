@@ -1,0 +1,84 @@
+<div class="signup-form wow fadeInUp">
+
+  <div id="overlayRegister" onclick="offProgress()">
+    <div class="w-100 d-flex justify-content-center align-items-center">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <form [formGroup]="formRegister" (ngSubmit)="onRegister(formRegister.value)">
+      <h3 class="text-center">Sign up</h3>
+      <div class="text-center social-btn">
+        <a href="#" class="btn btn-primary btn-block">
+        <fa-icon [icon]="faFacebook"></fa-icon> Sign in with <b>Facebook</b></a>
+        <a href="#" class="btn btn-info btn-block">
+          <fa-icon [icon]="faTwitter"></fa-icon> Sign in with <b>Twitter</b></a>
+        <a href="#" class="btn btn-danger btn-block">
+          <fa-icon [icon]="faGoogle"></fa-icon> Sign in with <b>Google</b></a>
+      </div>
+  <div class="or-seperator"><i>or</i></div>
+
+  <mat-form-field class="mat-form-field-width-md">
+    <mat-icon matPrefix>face</mat-icon>
+    <mat-label>Name</mat-label>
+    <input matInput name="name" formControlName="name"
+     placeholder="your name"
+     [errorStateMatcher]="matcher">
+     <mat-error *ngIf="formRegister.controls['name'].errors?.required">
+      Please enter your name, is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="mat-form-field-width-md">
+
+    <mat-label>Apellido</mat-label>
+    <input matInput name="lastname" formControlName="lastname"
+     placeholder="your lastname"
+     [errorStateMatcher]="matcher">
+     <mat-error *ngIf="formRegister.controls['lastname'].errors?.required">
+      Please enter your last name, is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+
+      <mat-form-field class="mat-form-field-width-full">
+        <mat-icon matPrefix>email</mat-icon>
+        <mat-label>Email</mat-label>
+        <input matInput name="email" formControlName="email"
+         placeholder="your email"
+         [errorStateMatcher]="matcher">
+         <mat-error *ngIf="formRegister.controls['email'].errors?.required">
+          Please enter your email, is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="mat-form-field-width-full">
+        <mat-icon matPrefix>locked</mat-icon>
+        <mat-label>Password</mat-label>
+        <input matInput name="password" formControlName="password"
+        placeholder="your password" type="password" [errorStateMatcher]="matcher" >
+        <mat-error *ngIf="formRegister.controls['password'].errors?.required">
+          Please enter your password, is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="mat-form-field-width-full">
+        <mat-icon matPrefix>perm_phone_msg</mat-icon>
+        <mat-label>Phone</mat-label>
+        <input matInput name="phone" formControlName="phone"
+        placeholder="your phone" [errorStateMatcher]="matcher" >
+        <mat-error *ngIf="formRegister.controls['phone'].errors?.required">
+          Please enter your phone number, is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-label *ngIf="!responseLogin.created && responseLogin.error.length>0" class="mat-error">{{responseLogin.error}}</mat-label>
+
+      <div class="form-group">
+          <button type="submit" mat-button class="btn btn-success btn-block login-btn">Sign up</button>
+      </div>
+      <div class="clearfix">
+          <label class=""><input type="checkbox"> Remember me</label>
+      </div>
+  </form>
+ </div>
+

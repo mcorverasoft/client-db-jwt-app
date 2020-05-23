@@ -1,0 +1,6 @@
+{
+"backendUrl" : "http://localhost:8081",
+"backendUrlLogin": "http://localhost:8081/app/login",
+"backendUrlSignup": "http://localhost:8081/app/signup",
+"textfile" : "assets/textfile.txt"
+}

@@ -1,0 +1,5 @@
+.myapp-no-padding-dialog .mat-dialog-container {
+  padding: 5px;
+  background-color: transparent;
+  background: transparent;
+}
